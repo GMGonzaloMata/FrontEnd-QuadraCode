@@ -15,7 +15,7 @@ export default function Hero() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/videos/video2.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dhignxely/video/upload/v1745112261/video2_tkifrc.mp4" type="video/mp4" />
       </video>
 
       {/* Degradado lateral sobre el video */}
