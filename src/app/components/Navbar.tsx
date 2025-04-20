@@ -67,30 +67,30 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.ul
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="md:hidden flex flex-col gap-4 px-6 pb-6 bg-[#070a13]/80 backdrop-blur-md"
-          >
-            <li>
-              <Link
-                href="/#nosotros"
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-lg font-medium text-white hover:text-purple-400 transition"
-              >
-                Servicios
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#video-nosotros"
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-lg font-medium text-white hover:text-purple-400 transition"
-              >
-                Nosotros
-              </Link>
-            </li>
-          </motion.ul>
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          className="md:hidden flex flex-col gap-2 px-6 pb-4 bg-[#070a13]/80 backdrop-blur-md"
+        >
+          <li>
+            <Link
+              href="/#nosotros"
+              onClick={() => setIsMenuOpen(false)}
+              className="block py-4 text-lg font-medium text-white hover:text-purple-400 transition"
+            >
+              Servicios
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/#video-nosotros"
+              onClick={() => setIsMenuOpen(false)}
+              className="block py-1 text-lg font-medium text-white hover:text-purple-400 transition"
+            >
+              Nosotros
+            </Link>
+          </li>
+        </motion.ul>        
         )}
       </AnimatePresence>
     </motion.nav>

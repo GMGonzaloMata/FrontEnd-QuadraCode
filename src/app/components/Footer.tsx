@@ -48,7 +48,7 @@ export default function Footer() {
 
         {/* Columna 3 */}
         <div className="flex items-center gap-3">
-          <a href="#" className="text-sm text-white/80 hover:text-white transition">
+          <a className="text-sm text-white/80 hover:text-white transition">
             Política de privacidad
           </a>
           <a

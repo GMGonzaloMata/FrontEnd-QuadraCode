@@ -63,8 +63,8 @@ export default function VideoPromo() {
         <motion.div
           onClick={() => setIsOpen(true)}
           className="group flex w-full cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_rgba(168,85,247,0.5)] rounded-l-md"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >

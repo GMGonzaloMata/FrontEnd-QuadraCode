@@ -45,7 +45,9 @@ export default function About() {
           </ul>
 
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            En QuadraCode combinamos nuestra formación como estudiantes de Ingeniería en Sistemas con la pasión por la tecnología, brindando soluciones modernas, accesibles y alineadas con los objetivos de nuestros clientes.
+          QuadraCode es una empresa de desarrollo de software enfocada en impulsar el crecimiento digital de marcas y negocios.
+           Diseñamos soluciones personalizadas, desde plataformas web y móviles hasta sistemas de gestión, trabajando de forma colaborativa
+             con cada cliente para garantizar que cada proyecto refleje su identidad y cumpla sus objetivos comerciales.
           </p>
         </motion.div>
 

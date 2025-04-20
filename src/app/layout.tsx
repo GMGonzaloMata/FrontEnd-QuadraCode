@@ -17,10 +17,12 @@ export const metadata: Metadata = {
   title: "QuadraCode",
   description: "Empresa de desarrollo de software en Corrientes, Argentina. Somos QuadraCode, estudiantes apasionados por crear soluciones digitales.",
   icons: {
-    icon: "/favicon.ico", // o "/favicon.png" si subiste como .png
+    icon: "/favicon.ico",
+  },
+  other: {
+    "google-site-verification": "PTDRhprIFCybxdgER8ZouaaO1E0hZYltrymAPgXlfi0",
   },
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
