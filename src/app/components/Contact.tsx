@@ -60,7 +60,7 @@ export default function ContactPage() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-50"
       >
-        <source src="https://res.cloudinary.com/dhignxely/video/upload/q_auto,f_auto/v1745112382/3249940-uhd_3840_2160_25fps_pylrcx.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dhignxely/video/upload/v1745112382/3249940-uhd_3840_2160_25fps_pylrcx.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/20 z-0" />
