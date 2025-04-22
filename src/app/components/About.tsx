@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -59,10 +60,13 @@ export default function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <img
+          <Image
             src="/about-image.png"
             alt="Sobre nosotros"
-            className="rounded-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"
+            width={600}
+            height={600}
+            priority
+            className="rounded-xl w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"
           />
         </motion.div>
       </div>

@@ -3,6 +3,8 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlayCircle, PauseCircle, Volume2, VolumeX, X } from 'lucide-react';
+import Image from 'next/image';
+
 
 export default function VideoPromo() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,15 +67,18 @@ export default function VideoPromo() {
           className="group flex w-full cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_4px_rgba(168,85,247,0.5)] rounded-l-md"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.6 }} // sin delay
           viewport={{ once: true }}
         >
           <div className="relative w-32 h-20 md:w-40 md:h-24 flex-shrink-0 rounded-l-md overflow-hidden">
-            <img
-              src="/miniatura.jpg"
-              alt="Miniatura"
-              className="w-full h-full object-cover transition duration-300 group-hover:brightness-75"
-            />
+          <Image
+            src="/miniatura.jpg"
+            alt="Miniatura"
+            width={160} // Ajustá estos valores si sabés los exactos (por ejemplo: 160x120px)
+            height={120}
+            className="w-full h-full object-cover transition duration-300 group-hover:brightness-75 rounded-l-md"
+            priority
+          />
             <div className="absolute inset-0 flex items-center justify-center">
               <PlayCircle className="w-10 h-10 text-white transition-transform duration-300 group-hover:scale-110" />
             </div>

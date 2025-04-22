@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image'; 
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +31,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo + Nombre */}
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo QuadraCode" className="h-14 w-14 object-contain" />
+        <Image
+            src="/logo.png"
+            alt="Logo QuadraCode"
+            width={56}   // Aproximadamente h-14 (14 * 4px = 56px)
+            height={56}
+            className="object-contain"
+            priority
+          />
           <span className="text-xl font-bold tracking-wide">QuadraCode</span>
         </Link>
 

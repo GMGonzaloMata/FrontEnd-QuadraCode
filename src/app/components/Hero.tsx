@@ -23,14 +23,14 @@ export default function Hero() {
 
       {/* Contenido sobre el degradado */}
       <div className="z-10 w-full max-w-5xl md:pl-16 lg:pl-32">
-        <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Transformamos ideas en <br className="hidden sm:block" /> soluciones digitales
-        </motion.h1>
+      <motion.h1
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: 'easeInOut' }}
+      >
+        Transformamos ideas en <br className="hidden sm:block" /> soluciones digitales
+      </motion.h1>
 
         <motion.p
           className="text-base sm:text-lg md:text-xl max-w-2xl mb-8 sm:mb-10 text-white/90 font-medium"
