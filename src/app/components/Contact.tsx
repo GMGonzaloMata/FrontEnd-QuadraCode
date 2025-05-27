@@ -1,22 +1,24 @@
-'use client';
+"use client";
 
-import React, { useRef, useState } from 'react';
-import axios from 'axios';
+import React, { useRef, useState } from "react";
+import axios from "axios";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    nombre: '',
-    compania: '',
-    email: '',
-    telefono: '',
-    mensaje: ''
+    nombre: "",
+    compania: "",
+    email: "",
+    telefono: "",
+    mensaje: "",
   });
 
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const formTopRef = useRef<HTMLDivElement>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -26,8 +28,11 @@ export default function ContactPage() {
     const { nombre, compania, email, telefono, mensaje } = formData;
     if (!nombre || !compania || !email || !telefono || !mensaje) {
       setIsSuccess(false);
-      setStatusMessage('Debes llenar todos los campos.');
-      formTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setStatusMessage("Debes llenar todos los campos.");
+      formTopRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
       return;
     }
 
@@ -37,17 +42,31 @@ export default function ContactPage() {
         compania,
         email,
         telefono,
-        mensaje
+        mensaje,
       });
       setIsSuccess(true);
-      setStatusMessage('Mensaje enviado correctamente.');
-      setFormData({ nombre: '', compania: '', email: '', telefono: '', mensaje: '' });
-      formTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setStatusMessage("Mensaje enviado correctamente.");
+      setFormData({
+        nombre: "",
+        compania: "",
+        email: "",
+        telefono: "",
+        mensaje: "",
+      });
+      formTopRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     } catch (error) {
       console.error(error);
       setIsSuccess(false);
-      setStatusMessage('Error al enviar el mensaje. Intenta nuevamente más tarde.');
-      formTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setStatusMessage(
+        "Error al enviar el mensaje. Intenta nuevamente más tarde."
+      );
+      formTopRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
 
@@ -60,7 +79,10 @@ export default function ContactPage() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-50"
       >
-        <source src="https://res.cloudinary.com/dhignxely/video/upload/v1745112382/3249940-uhd_3840_2160_25fps_pylrcx.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/dhignxely/video/upload/v1745112382/3249940-uhd_3840_2160_25fps_pylrcx.mp4"
+          type="video/mp4"
+        />
       </video>
 
       <div className="absolute inset-0 bg-black/20 z-0" />
@@ -74,7 +96,11 @@ export default function ContactPage() {
         </h2>
 
         {statusMessage && (
-          <div className={`mb-6 text-center font-medium ${isSuccess ? 'text-green-400' : 'text-red-400'}`}>
+          <div
+            className={`mb-6 text-center font-medium ${
+              isSuccess ? "text-green-400" : "text-red-400"
+            }`}
+          >
             {statusMessage}
           </div>
         )}
@@ -144,7 +170,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="relative inline-block px-6 py-3 font-medium text-white bg-white/10 hover:bg-white/20 rounded-md transition cursor-pointer hover:scale-105 hover:shadow-[0_0_12px_3px_rgba(255,255,255,0.2)]"
             >
-              <span className="relative z-10">Comunicarse vía wpp</span>
+              <span className="relative z-10">Comunicarse vía WhatsApp</span>
             </a>
           </div>
         </form>
